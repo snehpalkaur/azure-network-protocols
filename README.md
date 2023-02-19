@@ -31,23 +31,23 @@ Set up your virtual environment
 
 Create a Resource Group:
 
-Resource Group
+![Image](assets/rg.png)
 
 Create a Windows virtual machine.
 
 While creating the VM, select the previously created Resource Group and allow it to create a new Virtual Network (Vnet) and Subnet. Make sure to use the password option under the Administrator Account section (not seen in image):
 
-Windows VM
+![Image](assets/win.png)
 
 Create an Ubuntu virtual machine.
 
 While creating the VM, select the previously created Resource Group and allow it to create a new Virtual Network (Vnet) and Subnet. Make sure to use the password option under the Administrator Account section (not seen in image):
 
-Ubuntu VM
+![Image](assets/ub.png)
 
 Observe Your Virtual Network within Network Watcher:
 
-Network Watcher
+![Image](assets/win.png)
 
 
 
