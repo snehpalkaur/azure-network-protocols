@@ -47,55 +47,53 @@ While creating the VM, select the previously created Resource Group and allow it
 
 Observe Your Virtual Network within Network Watcher:
 
-![Image](assets/win.png)
-
-
+![Image](assets/nw.png)
 
 Now let's observe some ICMP traffic
 
 Remote into your Windows 10 Virtual Machine, install Wireshark, open it and filter for ICMP traffic only. If you are using a Mac like me, you'll have to download Microsoft Remote Desktop from the app store:
 
-Microsoft Remote Desktop - Mac
+![Image](assets/win-l.png)
 
 Retrieve the private IP address of the Ubuntu VM and attempt to ping it from within the Windows 10 VM. Observe ping requests and replies within WireShark:
 
-Ubuntu private IP ICMP traffic - private IP
+![Image](assets/ubuntu.png)
+
+![Image](assets/ping.png)
 
 Attempt to ping a public website (such as www.google.com) and observe the traffic in WireShark:
 
-ICMP traffic - public IP
+![Image](assets/google.png)
 
 Initiate a perpetual/non-stop ping from your Windows 10 VM to your Ubuntu VM:
 
-ICMP traffic - perpetual ping
+![Image](assets/cont.png)
 
 Open the Network Security Group your Ubuntu VM is using and disable incoming (inbound) ICMP traffic, while back in the Windows 10 VM, observe the ICMP traffic in WireShark and the command line Ping activity:
 
-ICMP traffic - perpetual ping ICMP traffic - ICMP denied
+![Image](assets/port.png)
+
+![Image](assets/timeout.png)
 
 Re-enable ICMP traffic for the Network Security Group in your Ubuntu VM and back in the Windows 10 VM, observe the ICMP traffic in WireShark and the command line ping activity (should start working again).Finally, stop the ping activity:
 
-ICMP traffic - ICMP re-enabled
-
-
+![Image](assets/reenable.png)
 
 Time to observe SSH traffic
 
 Back in Wireshark, filter for SSH traffic only and from your Windows 10 VM, “SSH into” your Ubuntu virtual machine (via its private IP address). Type commands (ls, pwd, etc) into the linux SSH connection and observe SSH traffic spam in WireShark.
 
 Exit the SSH connection by typing ‘exit’ and pressing [return]:
-SSH traffic
 
-
+![Image](assets/ssh.png)
 
 And why not observe DHCP Traffic now
 
 Back in Wireshark, filter for DHCP traffic only. From your Windows 10 VM, attempt to issue your VM a new IP address from the command line (ipconfig /renew)
 
 Observe the DHCP traffic appearing in WireShark:
-DHCP traffic
 
-
+![Image](assets/dhcp.png)
 
 Let's observe DNS traffic next
 
@@ -103,9 +101,7 @@ Back in Wireshark, filter for DNS traffic only.
 
 From your Windows 10 VM within a command line, use nslookup to see what google.com and disney.com’s IP addresses are and observe the DNS traffic being shown in WireShark:
 
-DNS traffic
-
-
+![Image](assets/ns.png)
 
 And finally, we will observe RDP traffic to finish up this tutorial
 
@@ -115,7 +111,7 @@ Oserve the immediate non-stop spam of traffic? Why is it non-stop spamming vs on
 
 The answer is because the RDP (protocol) is constantly showing you a live stream from one computer to another, therefor traffic is always being transmitted:
 
-RDP traffic
+![Image](assets/tcp.png)
 
 
 
