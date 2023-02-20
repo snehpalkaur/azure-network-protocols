@@ -111,16 +111,8 @@ And finally, we will observe RDP traffic to finish up this tutorial
 
 Back in Wireshark, filter for RDP traffic only (tcp.port == 3389).
 
-Oserve the immediate non-stop spam of traffic? Why is it non-stop spamming vs only showing traffic when a command is inputted?
-
-The answer is because the RDP (protocol) is constantly showing you a live stream from one computer to another, therefor traffic is always being transmitted:
-
 ![Image](assets/tcp.png)
 
 
 
-I hope this tutorial helped you learn a little bit about network security protocols and observe traffic between virtual machines. And although I ran this on a my MacBook Air, this can be easily done on a PC without having to download a remote desktop app since Windows provides that with it's software.
-
-And now that we're done, DON'T FORGET TO CLEAN UP YOUR AZURE ENVIRONMENT so that you don't incur unnecessary charges.
-
-Close your Remote Desktop connection, delete the Resource Group(s) created at the beginning of this tutorial, and verify Resource Group deletion.
+:bulb: Do not forget to clean up your environment in Azure 
