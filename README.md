@@ -39,13 +39,12 @@ Create a Resource Group:
 
 Create a Windows virtual machine.
 
-While creating the VM, select the previously created Resource Group and allow it to create a new Virtual Network (Vnet) and Subnet. Make sure to use the password option under the Administrator Account section (not seen in image):
-
+While creating the VM, select the previously created Resource Group and allow it to create a new Virtual Network (Vnet) and Subnet. 
 ![Image](assets/win.png)
 
 Create an Ubuntu virtual machine.
 
-While creating the VM, select the previously created Resource Group and allow it to create a new Virtual Network (Vnet) and Subnet. Make sure to use the password option under the Administrator Account section (not seen in image):
+While creating the VM, select the previously created Resource Group and allow it to create a new Virtual Network (Vnet) and Subnet. 
 
 ![Image](assets/ub.png)
 
@@ -55,7 +54,7 @@ Observe Your Virtual Network within Network Watcher:
 
 Now let's observe some ICMP traffic
 
-Remote into your Windows 10 Virtual Machine, install Wireshark, open it and filter for ICMP traffic only. If you are using a Mac like me, you'll have to download Microsoft Remote Desktop from the app store:
+Remote into your Windows 10 Virtual Machine, install Wireshark, open it and filter for ICMP traffic only. 
 
 ![Image](assets/win-l.png)
 
